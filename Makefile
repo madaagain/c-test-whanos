@@ -1,10 +1,10 @@
-TARGET=app
-SRC=main.c
+TARGET = compiled-app
+SRC = app/main.c
 
-all: $(SRC)
+$(TARGET): $(SRC)
 	gcc -o $(TARGET) $(SRC)
+
+.PHONY: clean
 
 clean:
 	rm -f $(TARGET)
-
-.PHONY: all clean
